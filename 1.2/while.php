@@ -12,6 +12,7 @@
 </head>
 <body>
 <div>
+
 <!--                                Скрипт                               -->
 
 <?php
@@ -53,19 +54,35 @@ echo '</p></details></div>';
     </p>
     <p>
         <?php
-            if ($u>1) {
-                echo 'Было произведенно ' .$u .' итерации;';
+            function no_iteration() {
+                global $u;
+                switch($u) {
+                    case 0: 
+                        echo 'Было произведенно ' .$u .' итераций;'; 
+                        break;
+                    case 1: 
+                        echo 'Была произведенна ' .$u .' итерация;'; 
+                        break;
+                    case 2: 
+                        echo 'Было произведенно ' .$u .' итерации;'; 
+                        break;
+                    case 3: 
+                        echo 'Было произведенно ' .$u .' итерации;'; 
+                        break;
+                    case 4: 
+                        echo 'Было произведенно ' .$u .' итерации;';
+                        break;
+                    default: 
+                        echo 'Было произведенно ' .$u .' итераций;'; 
+                        break;
+                }
             }
-            elseif ($u == 1) {
-                echo 'Была произведенна ' .$u .' итерация;';
-            }
-            elseif ($u == 0) {
-                echo 'Было произведенно ' .$u .' итерации;'; 
-            }
+            no_iteration()
         ?>
     </p>
     </div>
 </div>
+
 <!--                           Форма для пользователя                            -->
 
     <div class="form" id="form1">
