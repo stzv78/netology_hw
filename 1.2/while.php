@@ -1,4 +1,26 @@
-<!--                Домашнее задание №1.2 Котюков Евгений                -->
+<?php
+
+$number = $_GET['number'];
+$variable_1 = 1;
+$variable_2 = 1;
+$variable_3 = 0;
+$result = 0;
+
+for ($u=0; $u<100; $u++){
+
+    if ($variable_1 > $number){
+        $result = 0;
+        break;
+    }
+    elseif ($variable_1 == $number) {
+        $result = 1;
+        break;
+    }
+    $variable_3 = $variable_1;
+    $variable_1 = $variable_1 + $variable_2;
+    $variable_2 = $variable_3;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,40 +34,10 @@
 </head>
 <body>
 <div>
-
-<!--                                Скрипт                               -->
-
-<?php
-
-$number = $_GET['number'];      // число пользователя  
-
-echo '<div id="one"><details><summary>Решение</summary><p id="exemple">';   //для спойлера с решением
-
-for ($x=1, $y=1, $u=0, $i=0; $x<$number+1; $z = $x, $x= $x + $y, $y = $z, $u++){
-
-// $x, $y, $z  1,2,3  переменные соответственно 
-// $x<$number+1 - позволяет определить любое число от 0 до бесконечности
-// "$x= $x + $y", "$y = $z" команды после итерации
-// $u - позволяет узнать сколько итераций было совершенно
-// $i - позволяет вывести сообщения о результате
-
-    if ($x > $number){
-        $i = 0;
-        break;
-    }
-    elseif ($x == $number) {
-        $i = 1;
-        break;
-    }
-    echo ($u+1) .') '.($x+$y) .' = ' .$x .' + ' .$y .'</br>'; // выводит решения каждой итерации в спойлер
-}
-echo '</p></details></div>';
-?>
-
     <div id="two">
     <p>
         <?php 
-            switch ($i) {
+            switch ($result) {
                  case 1:
                     echo 'Задуманное число является числом Фибоначчи'; 
                     break;
@@ -57,8 +49,6 @@ echo '</p></details></div>';
     </p>
     <p>
         <?php
-            function no_iteration() {
-                global $u;
                 switch($u) {
                     case 0: 
                         echo 'Было произведено ' .$u .' итераций;'; 
@@ -79,8 +69,6 @@ echo '</p></details></div>';
                         echo 'Было произведено ' .$u .' итераций;'; 
                         break;
                 }
-            }
-            no_iteration()
         ?>
     </p>
     </div>
