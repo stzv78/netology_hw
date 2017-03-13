@@ -56,7 +56,7 @@ foreach($array_animals_now_2 as $continent => $animal) {
 </head>
 <body>
     <div>
-        <h2>Настоящие животные</h2>
+        <h2>Настоящие животные</h2><br />
 <?php 
 $number_1 = 0;
 foreach($array_continents as $continent => $array_animals) {
@@ -78,7 +78,7 @@ foreach($array_continents as $continent => $array_animals) {
     </div>
 
     <div>
-        <h2>Вымышленные животные</h2>
+        <h2>Вымышленные животные</h2><br />
 <?php 
 foreach($array_animals_finish as $continent => $array_animals) {
     echo '<h2>'.$continent.'</h2>';
