@@ -29,12 +29,12 @@ foreach($array_continents as $continent => $array_animals) {
 $array_animals_finish = []; // Массив с именами вымышленные животные
 $id_value_animals_finish = 0;
 $random_continent = ['Eurasia','North America','South America','Africa','Australia','Antarctica'];
-$random_continent_result = count($array_animals_now_2[$random_continent[$random_continent_number]]);
 
 foreach($array_animals_now_2 as $continent => $animal) {
 
     foreach($animal as $names => $name) {
-        $random_continent_number = rand(0, 5);                                                               
+        $random_continent_number = rand(0, 5);
+        $random_continent_result = count($array_animals_now_2[$random_continent[$random_continent_number]]);                                                               
         $random_animal = rand(0, $random_continent_result-1);                                               
         $animal_name_random = $array_animals_now_2[$random_continent[$random_continent_number]]['animal_'.$random_animal][1];
         $finish_animal_name = $name[0] .' ' .$animal_name_random;
