@@ -6,7 +6,7 @@ $array_continents =  [          // Массив с животными
     'North America' => ['Perameles nasuta','Desmana moschata','Gazella','Lepus timidus','Sus scrofa'],
     'South America' => ['Bison','Castor canadensis','Lama','Procyon','Delphinus delphis'],
     'Africa' => ['Addax nasomaculatus','Papio cynocephalus','Syncerus caffer','Bos','Osphranter'],
-    'Australia' => ['Camelus dromaderius','Antilocapra americana','	Galago','Mustela erminea','Tachyglossus aculeatus'],
+    'Australia' => ['Camelus dromaderius','Antilocapra americana','Galago','Mustela erminea','Tachyglossus aculeatus'],
     'Antarctica' => ['Damaliscus dorcas','Hyaena','Equus zebra','Canis dingo','Dugong dugong']
 ];
 
