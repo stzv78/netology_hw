@@ -26,7 +26,7 @@ foreach($array_continents as $continent => $array_animals) {
     $id_value_animals_now_2 = 0;
 };
 
-$array_animals_finish = []; // Массив с именами вымышленные животные
+$array_animals_finish = []; // Массив с именами вымышленных животных
 $id_value_animals_finish = 0;
 $random_continent = ['Eurasia','North America','South America','Africa','Australia','Antarctica'];
 
@@ -56,6 +56,7 @@ foreach($array_animals_now_2 as $continent => $animal) {
 </head>
 <body>
     <div>
+        <h2>Настоящие животные</h2>
 <?php 
 $number_1 = 0;
 foreach($array_continents as $continent => $array_animals) {
@@ -77,6 +78,7 @@ foreach($array_continents as $continent => $array_animals) {
     </div>
 
     <div>
+        <h2>Вымышленные животные</h2>
 <?php 
 foreach($array_animals_finish as $continent => $array_animals) {
     echo '<h2>'.$continent.'</h2>';
