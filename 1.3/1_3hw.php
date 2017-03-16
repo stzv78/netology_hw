@@ -11,7 +11,6 @@ $array_continents =  [          // Массив с животными
 ];
 
 $array_animals_now_2 = [];  // Массив животными которые имеют в имени два слова. Имя животного разбит на массив из двух слов.
-$id_value_animals_now_2 = 0;
 
 foreach($array_continents as $continent => $array_animals) {
 
@@ -19,27 +18,33 @@ foreach($array_continents as $continent => $array_animals) {
         $number_of_words = str_word_count($animal);
         if ($number_of_words === 2) {
             $animal_value = (str_word_count($animal, 1));
-            $array_animals_now_2 [$continent]['animal_'.$id_value_animals_now_2] = $animal_value; 
-            ++$id_value_animals_now_2;
+            $array_animals_now_2 [$continent][] = $animal_value; 
         };
     };
-    $id_value_animals_now_2 = 0;
 };
 
-$array_animals_finish = []; // Массив с именами вымышленных животных
-$id_value_animals_finish = 0;
-$random_continent = ['Eurasia','North America','South America','Africa','Australia','Antarctica'];
-
-foreach($array_animals_now_2 as $continent => $animal) {
-
+$array_animals_now_3 = [];
+$array_animals_now_4 = [];
+foreach ($array_animals_now_2 as $continent => $animal) {
     foreach($animal as $names => $name) {
-        $random_continent_number = rand(0, 5);
-        $random_continent_result = count($array_animals_now_2[$random_continent[$random_continent_number]]);                                                               
-        $random_animal = rand(0, $random_continent_result-1);                                               
-        $animal_name_random = $array_animals_now_2[$random_continent[$random_continent_number]]['animal_'.$random_animal][1];
-        $finish_animal_name = $name[0] .' ' .$animal_name_random;
-        $array_animals_finish [$continent]['animal_'.$id_value_animals_finish] = $finish_animal_name;
-        ++$id_value_animals_finish;  
+        foreach($name as $names_1 => $name_1) {
+            if ($names_1 === 0) {
+                $array_animals_now_3 [$continent][] = $name_1;
+            } elseif ($names_1 === 1) {
+                $array_animals_now_4 [] = $name_1;
+            };
+        };
+    };
+};
+
+shuffle($array_animals_now_4);
+$array_animals_finish = []; // Массив с именами вымышленных животных
+$id_array_animals_now_4 = 0;
+foreach($array_animals_now_3 as $continent => $animal) {
+    foreach($animal as $names => $name) {                                            
+        $finish_animal_name = $name.' ' .$array_animals_now_4[$id_array_animals_now_4];
+        $array_animals_finish [$continent][] = $finish_animal_name;
+        ++$id_array_animals_now_4;
     };
 };
 ?>
