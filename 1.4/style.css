@@ -1,0 +1,34 @@
+body {
+    background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/stardust.png);
+    font-family: "PT Sans";
+    color: #444349;
+    text-shadow: 0 1px 0 #424242;
+}
+div {
+    margin: 50px auto 20px auto;
+    padding: 0px 0px 10px 0px;
+    width: 470px;
+    height: 170px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border: 4px solid hsla(0, 0%, 0%, 0.28);
+    border-radius: 25px;
+    font-size: 24px;
+}
+h1 {
+    font-size: 25px;
+}
+p {
+    margin: 4px 0px 11px 0px;
+    font-size: 17px;
+}
+p.condition {
+    font-size: 11px;
+    line-height: 2px;
+}
+p#img {
+    margin: -15px 0 -15px 0;
+}
+p#humidity {
+    margin: -40px -210px 0 0;
+}
