@@ -1,5 +1,5 @@
 <?php
-$directory = 'json';
+$directory = './json';
 $list_file = scandir($directory, 1);
 $amount_of_elements = count($list_file);
 $id_file = 1;
@@ -12,7 +12,7 @@ $id_file = 1;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/2.2/css/style.css" rel="stylesheet">
+    <link href="/u/kotyukov/2.2/css/style.css" rel="stylesheet">
     <title>Домашние задание 2.2</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ $id_file = 1;
     <?php
         foreach ($list_file as $id_data => $data) {
             if ($id_data < $amount_of_elements - 2) {
-                $array_form_json = file_get_contents('json/'.$data);
+                $array_form_json = file_get_contents('http://university.netology.ru/u/kotyukov/2.2/json/'.$data);
                 $array_form = json_decode($array_form_json, true);
                 echo '<p>' .$id_file .') ' .$array_form['name'] .'</p>';
                 ++$id_file;

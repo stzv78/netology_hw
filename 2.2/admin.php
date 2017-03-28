@@ -1,5 +1,5 @@
 <?php
-$exemple_file = "json\c2eefa41065d21c860b48f6cd425b0a2.json";
+$exemple_file = "./json/c2eefa41065d21c860b48f6cd425b0a2.json";
 $array_exemple = file_get_contents($exemple_file);
 $exeple = json_decode($array_exemple , true);
 function vardump($var) {
@@ -15,7 +15,7 @@ function vardump($var) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/2.2/css/style.css" rel="stylesheet">
+    <link href="/u/kotyukov/2.2/css/style.css" rel="stylesheet">
     <title>Домашние задание 2.2</title>
 </head>
 <body>
@@ -37,13 +37,13 @@ function vardump($var) {
             $array_json_user = json_decode($user_fail, true);
                         
             foreach($array_json_user as $data_id => $value) {
-                if (file_exists("json/".md5($array_json_user["name"]).".json")) {
+                if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
                 echo 'Форма с таким именем уже есть! Придумаёте другое имя.';
                 die;
                 };
             };
 
-            $file = "json/".md5($array_json_user["name"]).".json";
+            $file = "./json/".md5($array_json_user["name"]).".json";
             if (!file_exists($file)) {
                 $fp = fopen($file, "w");
                 fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
@@ -53,7 +53,7 @@ function vardump($var) {
         };
     ?>
 
-    <p><a href="/2.2/user_form.php">Создать форму</a></p>
+    <p><a href="user_form.php">Создать форму</a></p>
     <p><a href="list.php">Перейти к списку форм</a></p>
     </div>
 </div>

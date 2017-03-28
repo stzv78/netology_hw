@@ -1,5 +1,11 @@
 <?php 
-$error = []; 
+$error = [];
+if (isset($_POST['number']) === true) {
+    $number_post = $_POST['number'];
+} else {
+    $number_post = null;
+};
+$test_number = 0;
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +15,7 @@ $error = [];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/2.2/css/style.css" rel="stylesheet">
+    <link href="/u/kotyukov/2.2/css/style.css" rel="stylesheet">
     <title>Домашние задание 2.2</title>
 </head>
 <body>
@@ -22,19 +28,20 @@ $error = [];
         </form>
             
             <?php 
-            if ($_POST['number'] === null) {
-            } elseif ($_POST['number'] > 5) {
+            if ($number_post === null) {
+            } elseif ($number_post > 5) {
                 echo $error[] = 'Количестов пунтков должно быть меньше 5';
-            } elseif ($_POST['number'] < 1) {
+            } elseif ($number_post < 1) {
                 echo $error[] = 'Количестов пунтков не может быть меньше 1';
             } else {
             ?>
+
             <h6>Ответ на вопрос который вы запишите будет проверятся в последнем пункте.<br /> То есть последний пункт должен содержать вопрос, на который надо ответь. Ответ может быть как число так и слово.</h6>
             <form id="form_user" enctype="multipart/form-data" action="user_form.php" method="POST">
             <lable for="name">Введите имя формы: </lable>
-            <input id="name" name="name" type="name" placeholder="Форма №1"><br />
-            <lable for="name">Ответ который должен проверить сервер: </lable>
-            <input id="name" name="name" type="name" placeholder="Пример: 10"><br />
+            <input id="name" name="name" type="text" placeholder="Форма №1"><br />
+            <lable for="result">Ответ который должен проверить сервер: </lable>
+            <input id="result" name="result" type="text" placeholder="Пример: 10"><br />
 
             <?php for ( $x = 0; $x < $_POST['number']; ++$x ) { ?>
 
@@ -45,11 +52,12 @@ $error = [];
                 <input id="type<?= $x ?>" name="type<?= $x ?>" type="radio" value="email">Email адрес<br />
                 <input id="type<?= $x ?>" name="type<?= $x ?>" type="radio" value="url">URL адрес<br />
                 <lable for="text<?= $x ?>">Заголовок в <?= $x + 1 ?> пункте</lable>
-                <input id="text<?= $x ?>" name="text<?= $x ?>" type="text" placeholder="Заголовок <?= $x + 1 ?>" value="<?= $_POST['text'.$x]?>"><br />
+                <input id="text<?= $x ?>" name="text<?= $x ?>" type="text" placeholder="Заголовок <?= $x + 1 ?>"><br />
                 <lable for="placeholder<?= $x ?>">Placeholder в <?= $x + 1 ?> пункте</lable>
-                <input id="placeholder<?= $x ?>" name="placeholder<?= $x ?>" type="text" placeholder="Placeholder <?= $x + 1 ?>" value="<?= $_POST['placeholder'.$x]?>"><br />
+                <input id="placeholder<?= $x ?>" name="placeholder<?= $x ?>" type="text" placeholder="Placeholder <?= $x + 1 ?>"><br />
 
-            <?php 
+            <?php
+                ++$test_number; 
                 };
                 echo '<input type="submit" value="Создать"></form>';
                 $array_form_user = [];
@@ -57,13 +65,13 @@ $error = [];
 
             if (count($_POST) > 1) {
                 foreach($_POST as $data_id => $value) {
-                    if (count($_POST) < 3 * ($x + 1) +1 ) {
+                    if (count($_POST) < 3 * ($test_number + 1) +1 ) {
                         echo $error [] = 'Не все пункты были отмечены';
                         die;
                     } elseif ($value === '') {
                         echo $error [] = 'Не все пункты были заполнены';
                         die;
-                    } elseif (file_exists("json/".md5($_POST["name"]).".json")) {
+                    } elseif (file_exists("./json/".md5($_POST["name"]).".json")) {
                         echo $error [] = 'Форма с таким именем уже есть! Придумаёте другое имя.';
                         die;
                     } else {
@@ -71,7 +79,7 @@ $error = [];
                     };
                 };
 
-            $file = "json/".md5($array_form_user["name"]).".json";
+            $file = "./json/".md5($array_form_user["name"]).".json";
             if (!file_exists($file)) {
                 $fp = fopen($file, "w");
                 fwrite($fp, json_encode($array_form_user, JSON_UNESCAPED_UNICODE));
