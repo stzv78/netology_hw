@@ -51,16 +51,6 @@ function vardump($var) {
                 echo 'Файл успешно отправлен!';
             };
         };
-
-        if ($messenger === null) {
-        } else {
-            echo $messenger;
-        };
-
-        if ($messenger_1 === null) {
-        } else {
-            echo $messenger_1;
-        }
     ?>
 
     <p><a href="/2.2/user_form.php">Создать форму</a></p>
