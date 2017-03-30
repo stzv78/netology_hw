@@ -62,7 +62,6 @@ form#form_user {
     border: 4px solid hsla(0, 0%, 0%, 0.28);
     border-radius: 25px;
 }
-
 .exemple {
     text-align: left;
     padding: 15px;
@@ -71,11 +70,12 @@ form#form_user {
     border-radius: 25px;
     margin: -4px;
 }
-
 #admin {
     display: flex;
 }
-
 div.admin {
     margin: auto;
+}
+div.form img#certificate {
+    height: 100px;
 }

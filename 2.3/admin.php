@@ -1,8 +1,24 @@
 <?php
 $host  = $_SERVER['HTTP_HOST'];
 $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-if ($_FILES["file"]["error"] === 0){
-    header("Refresh:3;http://$host$uri/list.php");
+$error = null;
+
+if (isset($_FILES['file']['tmp_name']) === true) {
+    $user_fail = file_get_contents($_FILES['file']['tmp_name']);
+    $array_json_user = json_decode($user_fail, true);
+                
+    if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
+        $error = 1;
+    } else {
+        $file = "./json/".md5($array_json_user["name"]).".json";
+        if (!file_exists($file)) {
+            $fp = fopen($file, "w");
+            fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
+            fclose($fp);
+            $error = 2;
+            header("Refresh:3;http://$host$uri/list.php");
+        };
+    };
 };
 
 $exemple_file = "./json/0f1e125cac427577774b3b94aecf5e39.json";
@@ -40,22 +56,10 @@ function vardump($var) {
     </form>
 
     <?php
-        if (isset($_FILES['file']['tmp_name']) === true) {
-            $user_fail = file_get_contents($_FILES['file']['tmp_name']);
-            $array_json_user = json_decode($user_fail, true);
-                        
-            if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
-                echo 'Тест с таким именем уже есть! Придумаёте другое имя.';
-                die;
-            };
-
-            $file = "./json/".md5($array_json_user["name"]).".json";
-            if (!file_exists($file)) {
-                $fp = fopen($file, "w");
-                fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
-                fclose($fp);
-                echo 'Файл успешно отправлен!';
-            };
+        if ($error === 1){
+            echo 'Тест с таким именем уже есть! Придумаёте другое имя.';
+        } elseif ($error === 2) {
+            echo 'Файл успешно отправлен!';
         };
     ?>
 
