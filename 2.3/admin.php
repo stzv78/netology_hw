@@ -23,8 +23,8 @@ function vardump($var) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/u/kotyukov/2.2/css/style.css" rel="stylesheet">
-    <title>Домашние задание 2.2</title>
+    <link href="/u/kotyukov/2.3/css/style.css" rel="stylesheet">
+    <title>Домашние задание 2.3</title>
 </head>
 <body>
 <div class="form" id="admin">
@@ -44,18 +44,18 @@ function vardump($var) {
             $user_fail = file_get_contents($_FILES['file']['tmp_name']);
             $array_json_user = json_decode($user_fail, true);
                         
-        if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
-            echo 'Тест с таким именем уже есть! Придумаёте другое имя.';
-            die;
-            };
+            if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
+                echo 'Тест с таким именем уже есть! Придумаёте другое имя.';
+                die;
+                };
 
-        $file = "./json/".md5($array_json_user["name"]).".json";
-        if (!file_exists($file)) {
-            $fp = fopen($file, "w");
-            fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
-            fclose($fp);
-            echo 'Файл успешно отправлен!';
-            };
+            $file = "./json/".md5($array_json_user["name"]).".json";
+            if (!file_exists($file)) {
+                $fp = fopen($file, "w");
+                fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
+                fclose($fp);
+                echo 'Файл успешно отправлен!';
+                };
         };
     ?>
 

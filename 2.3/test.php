@@ -19,8 +19,8 @@ function form_number() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/u/kotyukov/2.2/css/style.css" rel="stylesheet">
-    <title>Домашние задание 2.2</title>
+    <link href="/u/kotyukov/2.3/css/style.css" rel="stylesheet">
+    <title>Домашние задание 2.3</title>
 </head>
 <body>
 <div class="form">
