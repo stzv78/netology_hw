@@ -55,7 +55,7 @@ function vardump($var) {
                 fwrite($fp, json_encode($array_json_user, JSON_UNESCAPED_UNICODE));
                 fclose($fp);
                 echo 'Файл успешно отправлен!';
-                };
+            };
         };
     ?>
 
