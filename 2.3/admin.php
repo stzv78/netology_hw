@@ -47,7 +47,7 @@ function vardump($var) {
             if (file_exists("./json/".md5($array_json_user["name"]).".json")) {
                 echo 'Тест с таким именем уже есть! Придумаёте другое имя.';
                 die;
-                };
+            };
 
             $file = "./json/".md5($array_json_user["name"]).".json";
             if (!file_exists($file)) {
