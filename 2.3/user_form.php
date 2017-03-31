@@ -1,4 +1,7 @@
 <?php 
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 $error = [];
 if (isset($_POST['number']) === true) {
     $number_post = $_POST['number'];
@@ -31,8 +34,8 @@ $test_number = 0;
             if ($number_post === null) {
             } elseif ($number_post > 5) {
                 echo $error[] = 'Количестов пунтков должно быть меньше 5';
-            } elseif ($number_post < 2) {
-                echo $error[] = 'Количестов пунтков не может быть меньше 2';
+            } elseif ($number_post < 1) {
+                echo $error[] = 'Количестов пунтков не может быть меньше 1';
             } else {
             ?>
 

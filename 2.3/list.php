@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 $directory = './json';
 $list_file = scandir($directory, 1);
 $amount_of_elements = count($list_file);

@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+
 $directory = './json';
 $list_file = scandir($directory, 1);
 $amount_of_elements = count($list_file);
@@ -13,13 +16,13 @@ function form_number() {
 };
 
 if (isset($_GET['form']) === false) { 
-    $error = 0;
+    $error = 1;
 } elseif (isset($_GET['form']) === true) {
     if ($_GET['form'] <= 0) {
-        $error = 1;
+        $error = 2;
         header("HTTP/1.0 404 Not Found");
     } elseif ($_GET['form'] >  $test_value) {
-    $error = 1;
+    $error = 2;
     header("HTTP/1.0 404 Not Found");
     };
 };
@@ -39,9 +42,9 @@ if (isset($_GET['form']) === false) {
 <div class="form">
 
     <?php 
-    if ($error === 0) {
+    if ($error === 1) {
         form_number();
-    } elseif ($error === 1) {
+    } elseif ($error === 2) {
         echo 'Тест с таким номером не существует';
         form_number();
         die;
@@ -70,20 +73,22 @@ if (isset($_GET['form']) === false) {
         };
         echo '<br /><input type="submit" value="отправить"></form>';
     };
-    if ($_POST['name_user'] === '') {
-        echo  'Введите имя';
-    } else {
-        if (isset($_POST['name'.($id-1)]) === true) {
-            if ($_POST['name'.($id-1)] === $array_form["result"]){
-                if (mb_strlen($_POST['name_user'], 'UTF-8') < 13) {
-                    echo '<p><img src="http://hw-notology/u/kotyukov/2.3/img/img.php?text=';
-                    echo $_POST['name_user'];
-                    echo '" id="certificate"></a></p>';
+    if (isset($_POST['name_user'])) {
+        if ('' === $_POST['name_user']) {
+            echo  'Введите имя';
+        } else {
+            if (isset($_POST['name'.($id-1)]) === true) {
+                if ($_POST['name'.($id-1)] === $array_form["result"]){
+                    if (mb_strlen($_POST['name_user'], 'UTF-8') < 13) {
+                        echo '<p><img src="http://university.netology.ru/user_data/kotyukov/2.3/img/img.php?text=';
+                        echo $_POST['name_user'];
+                        echo '" id="certificate"></a></p>';
+                    } else {
+                        echo 'Имя не должно быть больше 12 симоволов';
+                    };
                 } else {
-                    echo 'Имя не должно быть больше 12 симоволов';
+                    echo  'Неправильный ответ!';
                 };
-            } else {
-                echo  'Неправильный ответ!';
             };
         };
     };
