@@ -3,7 +3,7 @@ $directory = './json';
 $list_file = scandir($directory, 1);
 $amount_of_elements = count($list_file);
 $test_value = $amount_of_elements - 2;
-$error = [];
+$error = 0;
 
 function form_number() {
     echo '<form enctype="multipart/form-data" action="test.php" method="GET">';
@@ -15,11 +15,13 @@ function form_number() {
 if (isset($_GET['form']) === false) { 
     $error = 0;
 } elseif (isset($_GET['form']) === true) {
-    if ($_GET['form'] >  $test_value ) {
+    if ($_GET['form'] <= 0) {
         $error = 1;
-    };
-} elseif ($_GET['form'] <= 0 ){
+        header("HTTP/1.0 404 Not Found");
+    } elseif ($_GET['form'] >  $test_value) {
     $error = 1;
+    header("HTTP/1.0 404 Not Found");
+    };
 };
 ?>
 
@@ -40,7 +42,7 @@ if (isset($_GET['form']) === false) {
     if ($error === 0) {
         form_number();
     } elseif ($error === 1) {
-        echo $error [] = 'Тест с таким номером не существует';
+        echo 'Тест с таким номером не существует';
         form_number();
         die;
     } else {
