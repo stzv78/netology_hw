@@ -7,10 +7,6 @@
     {
         redirect('u/kotyukov/2.4/index.php');
     }
-    if ( $_SESSION['number_ban'] > 5 )
-    {
-
-    } else
     $data = $_POST;
     if( isset($data["go_login"]) )
     {
@@ -30,7 +26,7 @@
                 }
             }
         }
-        if ( $session_num_ban === null )
+        if ( $session_num_ban === 0 )
         {
             if ( empty($errors) and !empty($no_errors) )
             {
@@ -76,19 +72,22 @@
 <body>
 <div class="form">
 
-    <?php if ( $_SESSION['number_ban'] > 5): ?>
+    <?php 
+        if ( isset($_SESSION['number_ban']) ):
+            if ( $_SESSION['number_ban'] > 5): ?>
         <p style="color: red;">У меня не хватила сил сделать, что бы бан был на определённое время.<br /> По этому вы условно заблокированы!</p>
         <form action="logout.php" method="POST">
             <input type="submit" value="Снять бан">
         </p>
         </form>
     <?php   
-        die;
-    endif;
-    if ( !empty($errors) ) 
-    {
-        echo '<p style="color: red;">'.array_shift($errors).'</p>';
-    }
+                die;
+            endif;
+        endif;
+        if ( !empty($errors) ) 
+        {
+            echo '<p style="color: red;">'.array_shift($errors).'</p>';
+        }
     ?> 
 
     <?php if( $_SESSION['number'] < 6 ): ?>   
