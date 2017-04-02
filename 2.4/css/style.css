@@ -79,3 +79,6 @@ div.admin {
 img#certificate {
     height: 100px;
 }
+div.g-recaptcha {
+    display: inline-flex;
+}
