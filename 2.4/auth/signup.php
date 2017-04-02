@@ -5,6 +5,14 @@
     {
         redirect('u/kotyukov/2.4/index.php');
     }
+    
+    if ( isset($_SESSION['number_ban']) )
+    {
+         if ( $_SESSION['number_ban'] > 5)
+         {
+            redirect('login.php');
+         }
+    }  
 
     $data = $_POST;
     if( isset($data["go_regist"]) )

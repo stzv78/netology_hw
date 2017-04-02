@@ -4,6 +4,14 @@
     {
         redirect('u/kotyukov/2.4/admin.php');
     }
+
+    if ( isset($_SESSION['number_ban']) )
+    {
+         if ( $_SESSION['number_ban'] > 5)
+         {
+            redirect('./auth/login.php');
+         }
+    }  
 ?>
 
 <!DOCTYPE html>

@@ -75,7 +75,7 @@
     <?php 
         if ( isset($_SESSION['number_ban']) ):
             if ( $_SESSION['number_ban'] > 5): ?>
-        <p style="color: red;">У меня не хватила сил сделать, что бы бан был на определённое время.<br /> По этому вы условно заблокированы!</p>
+        <p style="color: red;">У меня не хватила сил сделать, что бы бан был на определённое время.<br /> Вы заблокированы на час!<br /> Нажмите на конопку через час</p>
         <form action="logout.php" method="POST">
             <input type="submit" value="Снять бан">
         </p>
