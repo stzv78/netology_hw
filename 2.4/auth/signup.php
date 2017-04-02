@@ -55,7 +55,7 @@
             fwrite($file_w , json_encode($login_array, JSON_UNESCAPED_UNICODE));
             fclose($file_w );
             $no_errors [] = 'Регистрация прошла успешно!';
-            refresh('u/kotyukov/2.4/index.php');
+            refresh('u/kotyukov/2.4/auth/login.php');
         } 
     }
 ?>
