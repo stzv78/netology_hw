@@ -1,12 +1,23 @@
 <?php
-    class CarClass
+    abstract class SuperClass
+    {
+        abstract function __construct();
+
+        abstract function print();
+    }
+
+    interface CarInterface
+    {
+            public function carPrint ();
+    }
+
+    class CarClass extends SuperClass implements CarInterface
     {
     	const WHEELS = 4;
         public $color;
         public $power;
         public $fuel;
         public $brand;
-        
 
         public function __construct ( $color='Белый', $power='100 л.с.', $fuel='10л на 100км', $brand='Форд' )
         {
@@ -16,9 +27,24 @@
         	$this->brand = $brand;
         	$this->wheels = self::WHEELS;
         }
+
+        public function print()
+        {
+            echo "Класс машин";
+        }
+
+        public function carPrint ()
+        {
+            echo $this->brand.' '.$this->power.' '.$this->fuel;
+        }
     }
 
-    class TVClass
+    interface TVInterface
+    {
+        public function TVPrint();
+    }
+
+    class TVClass extends SuperClass implements TVInterface
     {
     	const EQUIPMENT = ['ИК-пульт','Подставка','Кабель питания','HDMI кабель'];
     	const GUARANTEE = '12 месяцев';
@@ -34,9 +60,24 @@
     		$this->equipment = self::EQUIPMENT;
     		$this->guarantee = self::GUARANTEE;
     	}
+
+        public function print()
+        {
+            echo "Класс ТВ";
+        }
+
+        public function TVPrint()
+        {
+            echo $this->color.' '.$this->screenResolution.' '.$this->price.' '.$this->equipment.' '.$this->guarantee;
+        }
     }
 
-    class BallPenBoxClass
+    interface BallPenBoxInterface
+    {
+        public function BallPenBoxPrint();
+    }
+
+    class BallPenBoxClass extends SuperClass implements BallPenBoxInterface
     {
     	public $color;
     	public $price;
@@ -48,9 +89,23 @@
     		$this->price = $price;
     		$this->quantityInTheBox = $quantityInTheBox;
     	}
+
+        public function print()
+        {
+            echo "Класс коробки с ручками";
+        }
+
+        public function BallPenBoxPrint()
+        {
+            echo $this->color.' '.$this->price.' '.$this->quantityInTheBox;
+        }
+    }
+    interface DuckInterface
+    {
+        public function DuckPrint();
     }
 
-    class DuckClass
+    class DuckClass extends SuperClass implements DuckInterface
     {
     	public $weight;
     	public $name;
@@ -62,9 +117,24 @@
     		$this->name = $name;
     		$this->status = $status;
     	}
+
+        public function print()
+        {
+            echo "Класс с утками";
+        }
+
+        public function DuckPrint()
+        {
+            echo $this->weight.' '.$this->name.' '.$this->status;
+        }
     }
 
-    class ProductClass
+    interface ProductInterface
+    {
+        public function printProduct();
+    }
+
+    class ProductClass extends SuperClass implements ProductInterface
     {
     	public $price;
     	public $name;
@@ -79,7 +149,7 @@
     		$this->delivery = self::delivery($price);
     	}
 
-    	private function delivery($price)
+        private function delivery($price)
     	{
     		if( $price > 10000)
     		{
@@ -89,6 +159,16 @@
     			return 'Платная доставка';
     		}
     	}
+
+        public function print()
+        {
+            echo "Класс с продуктами";
+        }
+
+        public function printProduct()
+        {
+            echo $this->price.' '.$this->name.' '.$this->status.' '.$this->status.' '.$this->delivery;
+        }
     }
 
     $car = new CarClass('Красный','80 л.с.','7л на 100км','Лада');
