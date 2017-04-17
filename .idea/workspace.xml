@@ -2,111 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c9f95c-6104-4a2e-8137-ee0cee05e21d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/1411bbf5-1358-42f6-9c1f-10cda3d1a493.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4.1/app/CSRF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4.1/app/db.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4.1/app/session.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4.1/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/4.1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hw.iml" afterPath="$PROJECT_DIR$/.idea/hw.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.1/about.php" afterPath="$PROJECT_DIR$/1.1/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.1/style.css" afterPath="$PROJECT_DIR$/1.1/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.2/1_2hw.php" afterPath="$PROJECT_DIR$/1.2/1_2hw.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.2/style.css" afterPath="$PROJECT_DIR$/1.2/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.2/while.php" afterPath="$PROJECT_DIR$/1.2/while.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.3/1_3hw.php" afterPath="$PROJECT_DIR$/1.3/1_3hw.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.3/style.css" afterPath="$PROJECT_DIR$/1.3/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.4/1_4hw.php" afterPath="$PROJECT_DIR$/1.4/1_4hw.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1.4/style.css" afterPath="$PROJECT_DIR$/1.4/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.1/2_1hw.php" afterPath="$PROJECT_DIR$/2.1/2_1hw.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.1/data.json" afterPath="$PROJECT_DIR$/2.1/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.1/style.css" afterPath="$PROJECT_DIR$/2.1/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.2/admin.php" afterPath="$PROJECT_DIR$/2.2/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.2/css/style.css" afterPath="$PROJECT_DIR$/2.2/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.2/list.php" afterPath="$PROJECT_DIR$/2.2/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.2/test.php" afterPath="$PROJECT_DIR$/2.2/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.2/user_form.php" afterPath="$PROJECT_DIR$/2.2/user_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/admin.php" afterPath="$PROJECT_DIR$/2.3/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/css/style.css" afterPath="$PROJECT_DIR$/2.3/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/img/img.php" afterPath="$PROJECT_DIR$/2.3/img/img.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/list.php" afterPath="$PROJECT_DIR$/2.3/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/test.php" afterPath="$PROJECT_DIR$/2.3/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.3/user_form.php" afterPath="$PROJECT_DIR$/2.3/user_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/admin.php" afterPath="$PROJECT_DIR$/2.4/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/db.php" afterPath="$PROJECT_DIR$/2.4/auth/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/functions.php" afterPath="$PROJECT_DIR$/2.4/auth/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/login.php" afterPath="$PROJECT_DIR$/2.4/auth/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/logout.php" afterPath="$PROJECT_DIR$/2.4/auth/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/signup.php" afterPath="$PROJECT_DIR$/2.4/auth/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/auth/visitor.php" afterPath="$PROJECT_DIR$/2.4/auth/visitor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/css/style.css" afterPath="$PROJECT_DIR$/2.4/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/img/img.php" afterPath="$PROJECT_DIR$/2.4/img/img.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/index.php" afterPath="$PROJECT_DIR$/2.4/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/list.php" afterPath="$PROJECT_DIR$/2.4/list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/test.php" afterPath="$PROJECT_DIR$/2.4/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.4/user_form.php" afterPath="$PROJECT_DIR$/2.4/user_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/css/style.css" afterPath="$PROJECT_DIR$/3.1/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/index.php" afterPath="$PROJECT_DIR$/3.1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news.php" afterPath="$PROJECT_DIR$/3.1/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news_json/commet_news.json" afterPath="$PROJECT_DIR$/3.1/news_json/commet_news.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news_json/news.json" afterPath="$PROJECT_DIR$/3.1/news_json/news.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/phpinfo.php" afterPath="$PROJECT_DIR$/3.1/phpinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/print_news.php" afterPath="$PROJECT_DIR$/3.1/print_news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/error.php" afterPath="$PROJECT_DIR$/3.2/class/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/flowers.php" afterPath="$PROJECT_DIR$/3.2/class/flowers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/json/flowres.json" afterPath="$PROJECT_DIR$/3.2/class/json/flowres.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/json/pelmenis.json" afterPath="$PROJECT_DIR$/3.2/class/json/pelmenis.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/json/sugar.json" afterPath="$PROJECT_DIR$/3.2/class/json/sugar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/pelmenis.php" afterPath="$PROJECT_DIR$/3.2/class/pelmenis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/product.php" afterPath="$PROJECT_DIR$/3.2/class/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/class/sugar.php" afterPath="$PROJECT_DIR$/3.2/class/sugar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/css/style.css" afterPath="$PROJECT_DIR$/3.2/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/index.php" afterPath="$PROJECT_DIR$/3.2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.2/print.php" afterPath="$PROJECT_DIR$/3.2/print.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/autoload.php" afterPath="$PROJECT_DIR$/3.3.1/app/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/classes/ProductClass.php" afterPath="$PROJECT_DIR$/3.3.1/app/classes/ProductClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/classes/cart/CartClass.php" afterPath="$PROJECT_DIR$/3.3.1/app/classes/cart/CartClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/classes/food/PelmenisClass.php" afterPath="$PROJECT_DIR$/3.3.1/app/classes/food/PelmenisClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/classes/food/SugarClass.php" afterPath="$PROJECT_DIR$/3.3.1/app/classes/food/SugarClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/classes/other/FlowersClass.php" afterPath="$PROJECT_DIR$/3.3.1/app/classes/other/FlowersClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/error.php" afterPath="$PROJECT_DIR$/3.3.1/app/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/json/flowres.json" afterPath="$PROJECT_DIR$/3.3.1/app/json/flowres.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/json/pelmenis.json" afterPath="$PROJECT_DIR$/3.3.1/app/json/pelmenis.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/json/sugar.json" afterPath="$PROJECT_DIR$/3.3.1/app/json/sugar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/app/session.php" afterPath="$PROJECT_DIR$/3.3.1/app/session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/cart.php" afterPath="$PROJECT_DIR$/3.3.1/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/css/style.css" afterPath="$PROJECT_DIR$/3.3.1/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/index.php" afterPath="$PROJECT_DIR$/3.3.1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/text.txt" afterPath="$PROJECT_DIR$/3.3.1/text.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/autoload.php" afterPath="$PROJECT_DIR$/3.3.2/app/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/AllProduct.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/AllProduct.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/AllProductTrait.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/AllProductTrait.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/appliances/Appliances.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/appliances/Appliances.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/cart/Cart.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/cart/Cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/clothing/Clothing.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/clothing/Clothing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/furniture/Furniture.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/furniture/Furniture.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/order/Order.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/order/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/classes/telephones/Telephones.php" afterPath="$PROJECT_DIR$/3.3.2/app/classes/telephones/Telephones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/db/db.json" afterPath="$PROJECT_DIR$/3.3.2/app/db/db.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/app/session.php" afterPath="$PROJECT_DIR$/3.3.2/app/session.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/css/style.css" afterPath="$PROJECT_DIR$/3.3.2/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/index.php" afterPath="$PROJECT_DIR$/3.3.2/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/logout.php" afterPath="$PROJECT_DIR$/3.3.2/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.2/order.php" afterPath="$PROJECT_DIR$/3.3.2/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/db.php" afterPath="$PROJECT_DIR$/auth1/auth/db.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/functions.php" afterPath="$PROJECT_DIR$/auth1/auth/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/login.php" afterPath="$PROJECT_DIR$/auth1/auth/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/logout.php" afterPath="$PROJECT_DIR$/auth1/auth/logout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/signup.php" afterPath="$PROJECT_DIR$/auth1/auth/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/auth/visitor.php" afterPath="$PROJECT_DIR$/auth1/auth/visitor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auth1/index.php" afterPath="$PROJECT_DIR$/auth1/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4.1/app/CSRF.php" afterPath="$PROJECT_DIR$/4.1/app/CSRF.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4.1/app/db.php" afterPath="$PROJECT_DIR$/4.1/app/db.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -161,15 +59,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4.1/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-570">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="360">
+              <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="62" />
               <folding>
-                <marker date="1492440890638" expanded="true" signature="1775:1803" ph="SELECT * FRO... books" />
-                <marker date="1492440890638" expanded="true" signature="2629:2648" ph="SELECT * FRO... books" />
+                <marker date="1492442495760" expanded="true" signature="1775:1803" ph="SELECT * FRO... books" />
+                <marker date="1492442495760" expanded="true" signature="2629:2648" ph="SELECT * FRO... books" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.1/app/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CSRF.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/4.1/app/CSRF.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,9 +125,9 @@
         <option value="dbview:/ba0e8215/1411bbf5-1358-42f6-9c1f-10cda3d1a493/information_schema.REFERENTIAL_CONSTRAINTS" />
         <option value="$PROJECT_DIR$/4.1/app/session.php" />
         <option value="$PROJECT_DIR$/4.1/css/style.css" />
-        <option value="$PROJECT_DIR$/4.1/app/CSRF.php" />
-        <option value="$PROJECT_DIR$/4.1/index.php" />
         <option value="$PROJECT_DIR$/4.1/app/db.php" />
+        <option value="$PROJECT_DIR$/4.1/index.php" />
+        <option value="$PROJECT_DIR$/4.1/app/CSRF.php" />
       </list>
     </option>
   </component>
@@ -221,9 +139,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
-    <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="x" value="-8" />
+    <option name="y" value="24" />
+    <option name="width" value="1373" />
+    <option name="height" value="736" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -289,6 +208,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="4.1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotyukov" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotyukov" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4.1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotyukov" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kotyukov" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4.1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,12 +392,12 @@
       <workItem from="1492372548159" duration="62000" />
       <workItem from="1492402370266" duration="1238000" />
       <workItem from="1492403782252" duration="141000" />
-      <workItem from="1492403936597" duration="22798000" />
+      <workItem from="1492403936597" duration="24005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61772000" />
+    <option name="totallyTimeSpent" value="62979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -454,18 +409,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <frame x="-8" y="24" width="1373" height="736" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24377745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19015151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18914846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3189911" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32662538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32662538" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -770,22 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/4.1/app/CSRF.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/4.1/app/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/4.1/app/session.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -796,12 +736,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/4.1/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="360">
+          <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="62" />
           <folding>
-            <marker date="1492440890638" expanded="true" signature="1775:1803" ph="SELECT * FRO... books" />
-            <marker date="1492440890638" expanded="true" signature="2629:2648" ph="SELECT * FRO... books" />
+            <marker date="1492442495760" expanded="true" signature="1775:1803" ph="SELECT * FRO... books" />
+            <marker date="1492442495760" expanded="true" signature="2629:2648" ph="SELECT * FRO... books" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.1/app/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.1/app/CSRF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="55" lean-forward="false" selection-start-line="4" selection-start-column="55" selection-end-line="4" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
