@@ -54,7 +54,6 @@ $_POST['author'] = isset($_POST['author']) ? filter_input(INPUT_POST, 'author', 
     <?php
         endforeach;
     else:
-
         $booksDataArray = $db->query("SELECT * FROM books");
         foreach ($booksDataArray as $key => $data):
     ?>
