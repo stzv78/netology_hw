@@ -1,52 +1,56 @@
 <?php
-	class CommetClass
-	{
-		public $uri;
-		
-		function __construct( $uri = null )
-		{
-			$this->uri = $uri;
-		}
 
-		public function printCommet()
-		{
-			$uriJson = $this->uri;
-			$arrayCommetJson = file_get_contents('./news_json/'.$uriJson);
-			$arrayCommet = json_decode($arrayCommetJson);
-			$arrayCommetPrint = [];
-			for ($i=0; $i < 5; $i++) 
-			{ 
-				$arrayCommetPrint[] = $arrayCommet->{$i};
-			}
-			return $arrayCommetPrint;
-		}
-	}
+class CommentClass
+{
+    public $comment;
 
-	class PostNewsClass
-	{
-		public $uri;
-		
-		function __construct( $uri = null )
-		{
-			$this->uri = $uri;
-		}
+    function __construct($commentPOST)
+    {
+        # Код который записывет коментарий в БД
+    }
 
-		public function printNews()
-		{
-			$commit = new CommetClass('commet_news.json');
-			$commetnArray = $commit->printCommet();
-			$uriJson = $this->uri;
-			$arrayNewsJson = file_get_contents('./news_json/'.$uriJson);
-			$arrayNews = json_decode($arrayNewsJson);
-			for ($i=0; $i < 5; $i++) 
-			{
-				echo '<div><h1>'.$arrayNews->{'news'.$i}->h1.'</h1>';
-				echo '<p class="commit">Commet: '.$commetnArray [$i].'</p>';
-				echo '<p>'.$arrayNews->{'news'.$i}->p1.'</p>';
-				echo '<p>'.$arrayNews->{'news'.$i}->p2.'</p></div>';
-			}
+    private static function dataBaseConnect()
+    {
+        $arrayCommetJson = file_get_contents('./news_json/commet_news.json');
+        $arrayCommet = json_decode($arrayCommetJson, true);
+        return $arrayCommet;
+    }
 
-		}
-	}
+    public static function getComment($id)
+    {
+        $dataBaseCommet = self::dataBaseConnect();
+        foreach ($dataBaseCommet as $key => $data) {
+            if ($key === $id) {
+                return $data;
+            }
+        }
+    }
+}
 
-	$news = new PostNewsClass('news.json');
+class PostNewsClass
+{
+    public $news;
+    private $id;
+
+    function __construct($id)
+    {
+        $this->id = $id;
+    }
+
+    private static function dataBaseNews()
+    {
+        $arrayNewsJson = file_get_contents('./news_json/news.json');
+        $arrayNews = json_decode($arrayNewsJson);
+        return $arrayNews;
+    }
+
+    public function printNews()
+    {
+        $comment = CommentClass::getComment($this->id);
+        $arrayNews = self::dataBaseNews();
+        echo '<div><h1>' . $arrayNews->{$this->id}->h1 . '</h1>';
+        echo '<p class="commit">Commet: ' . $comment . '</p>';
+        echo '<p>' . $arrayNews->{$this->id}->p1 . '</p>';
+        echo '<p>' . $arrayNews->{$this->id}->p2 . '</p></div>';
+    }
+}

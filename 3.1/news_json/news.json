@@ -1,32 +1,8 @@
 {	
-	"news0":
+	"0":
 	{
 		"h1":"Lorem ipsum dolor.",
 		"p1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, ad a harum. Quia unde, laborum architecto fugiat amet odit quisquam.",
 		"p2":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quia, itaque nostrum commodi, neque maiores."
-	},
-	"news1":
-	{
-		"h1":"Lorem ipsum dolor sit amet, consectetur.",
-		"p1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio magni, aliquid libero temporibus repudiandae, adipisci cum.",
-		"p2":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex facilis commodi exercitationem, sunt id facere nostrum, iusto."
-	},
-	"news2":
-	{
-		"h1":"Lorem ipsum dolor sit.",
-		"p1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officia perferendis, velit laborum architecto, eum sequi possimus provident, harum in hic?",
-		"p2":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non enim, magnam at veritatis sunt."
-	},
-	"news3":
-	{
-		"h1":"Lorem ipsum dolor.",
-		"p1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa beatae numquam mollitia, dolores molestiae asperiores culpa pariatur fuga distinctio.",
-		"p2":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur placeat adipisci molestiae similique quo facere, vitae illo dicta porro assumenda."
-	},
-	"news4":
-	{
-		"h1":"Lorem ipsum dolor sit amet.",
-		"p1":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium veniam at maxime consequuntur temporibus natus perferendis minus cumque voluptas sit.",
-		"p2":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia odit, voluptas cupiditate itaque in sit, sed assumenda."
 	}
 }
