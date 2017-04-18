@@ -59,7 +59,7 @@ class TVClass
         echo 'Канал:' . $this->сhangeСhannels;
     }
 
-    public function сhangeСhannels($number)
+    public function сhangeСhannel($number)
     {
         $this->сhangeСhannels = $number;
         echo 'Канал:' . $this->сhangeСhannels;

@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78c9f95c-6104-4a2e-8137-ee0cee05e21d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/3.1/phpinfo.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/index.php" afterPath="$PROJECT_DIR$/3.1/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news.php" afterPath="$PROJECT_DIR$/3.1/news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news_json/commet_news.json" afterPath="$PROJECT_DIR$/3.1/news_json/commet_news.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/news_json/news.json" afterPath="$PROJECT_DIR$/3.1/news_json/news.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.1/print_news.php" afterPath="$PROJECT_DIR$/3.1/print_news.php" />
-    </list>
+    <list default="true" id="78c9f95c-6104-4a2e-8137-ee0cee05e21d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -392,12 +384,12 @@
       <workItem from="1492526686428" duration="718000" />
       <workItem from="1492534900451" duration="1322000" />
       <workItem from="1492536376097" duration="3694000" />
-      <workItem from="1492540545461" duration="3495000" />
+      <workItem from="1492540545461" duration="3752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76803000" />
+    <option name="totallyTimeSpent" value="77060000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +402,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24377745" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1530303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -420,7 +411,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262295" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52012384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
