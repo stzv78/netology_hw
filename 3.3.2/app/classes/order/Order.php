@@ -17,11 +17,11 @@ class Order
         $producValueId = array_count_values($this->dataProduct['idProduct']);
         $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
         #var_dump($this->dataProduct);
-        foreach ($producValueId as $key=>$data) {
-            echo '<div><p>Товар: '.$dbProduct[$key]['brand'].'</p>';
-            echo '<p>Цена: '.($dbProduct[$key]['price']*$data).'</p>';
-            echo '<p>Количестов: '.$data.' шт.</p>';
-            echo '<p><a href="order.php?delId='.$key.'">Удалить из корзины</a></p></div>';
+        foreach ($producValueId as $key => $data) {
+            echo '<div><p>Товар: ' . $dbProduct[$key]['brand'] . '</p>';
+            echo '<p>Цена: ' . ($dbProduct[$key]['price'] * $data) . '</p>';
+            echo '<p>Количестов: ' . $data . ' шт.</p>';
+            echo '<p><a href="order.php?delId=' . $key . '">Удалить из корзины</a></p></div>';
         }
     }
 

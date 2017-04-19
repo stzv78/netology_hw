@@ -10,8 +10,8 @@ class Appliances extends \classes\AllProduct
     public function __construct()
     {
         $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
-        foreach ($dbProduct as $key=>$data){
-            if ($data["class"]==="Бытовая техника"){
+        foreach ($dbProduct as $key => $data) {
+            if ($data["class"] === "Бытовая техника") {
                 $arrayAppliances[$key] = $data;
             }
         }

@@ -1,200 +1,200 @@
 <?php
-    abstract class SuperClass
-    {
-        abstract function __construct();
 
-        abstract function print();
+abstract class SuperClass
+{
+    abstract function __construct();
+
+    abstract function print();
+}
+
+interface CarInterface
+{
+    public function carPrint();
+}
+
+class CarClass extends SuperClass implements CarInterface
+{
+    const WHEELS = 4;
+    public $color;
+    public $power;
+    public $fuel;
+    public $brand;
+
+    public function __construct($color = 'Белый', $power = '100 л.с.', $fuel = '10л на 100км', $brand = 'Форд')
+    {
+        $this->color = $color;
+        $this->power = $power;
+        $this->fuel = $fuel;
+        $this->brand = $brand;
+        $this->wheels = self::WHEELS;
     }
 
-    interface CarInterface
+    public function print()
     {
-            public function carPrint ();
+        echo "Класс машин";
     }
 
-    class CarClass extends SuperClass implements CarInterface
+    public function carPrint()
     {
-    	const WHEELS = 4;
-        public $color;
-        public $power;
-        public $fuel;
-        public $brand;
+        echo $this->brand . ' ' . $this->power . ' ' . $this->fuel;
+    }
+}
 
-        public function __construct ( $color='Белый', $power='100 л.с.', $fuel='10л на 100км', $brand='Форд' )
-        {
-        	$this->color = $color;
-        	$this->power = $power;
-        	$this->fuel = $fuel;
-        	$this->brand = $brand;
-        	$this->wheels = self::WHEELS;
-        }
+interface TVInterface
+{
+    public function TVPrint();
+}
 
-        public function print()
-        {
-            echo "Класс машин";
-        }
+class TVClass extends SuperClass implements TVInterface
+{
+    const EQUIPMENT = ['ИК-пульт', 'Подставка', 'Кабель питания', 'HDMI кабель'];
+    const GUARANTEE = '12 месяцев';
+    public $color;
+    public $screenResolution;
+    public $price;
 
-        public function carPrint ()
-        {
-            echo $this->brand.' '.$this->power.' '.$this->fuel;
-        }
+    public function __construct($color = 'Чёрный', $screenResolution = 'Full HD', $price = 15000)
+    {
+        $this->color = $color;
+        $this->screenResolution = $screenResolution;
+        $this->price = $price;
+        $this->equipment = self::EQUIPMENT;
+        $this->guarantee = self::GUARANTEE;
     }
 
-    interface TVInterface
+    public function print()
     {
-        public function TVPrint();
+        echo "Класс ТВ";
     }
 
-    class TVClass extends SuperClass implements TVInterface
+    public function TVPrint()
     {
-    	const EQUIPMENT = ['ИК-пульт','Подставка','Кабель питания','HDMI кабель'];
-    	const GUARANTEE = '12 месяцев';
-    	public $color;
-    	public $screenResolution;
-    	public $price;
+        echo $this->color . ' ' . $this->screenResolution . ' ' . $this->price . ' ' . $this->equipment . ' ' . $this->guarantee;
+    }
+}
 
-    	public function __construct ( $color='Чёрный', $screenResolution='Full HD', $price= 15000 )
-    	{
-    		$this->color = $color;
-    		$this->screenResolution = $screenResolution;
-    		$this->price = $price;
-    		$this->equipment = self::EQUIPMENT;
-    		$this->guarantee = self::GUARANTEE;
-    	}
+interface BallPenBoxInterface
+{
+    public function BallPenBoxPrint();
+}
 
-        public function print()
-        {
-            echo "Класс ТВ";
-        }
+class BallPenBoxClass extends SuperClass implements BallPenBoxInterface
+{
+    public $color;
+    public $price;
+    public $quantityInTheBox;
 
-        public function TVPrint()
-        {
-            echo $this->color.' '.$this->screenResolution.' '.$this->price.' '.$this->equipment.' '.$this->guarantee;
-        }
+    public function __construct($color = 'Синий', $price = 200, $quantityInTheBox = 50)
+    {
+        $this->color = $color;
+        $this->price = $price;
+        $this->quantityInTheBox = $quantityInTheBox;
     }
 
-    interface BallPenBoxInterface
+    public function print()
     {
-        public function BallPenBoxPrint();
+        echo "Класс коробки с ручками";
     }
 
-    class BallPenBoxClass extends SuperClass implements BallPenBoxInterface
+    public function BallPenBoxPrint()
     {
-    	public $color;
-    	public $price;
-    	public $quantityInTheBox;
-
-    	public function __construct ( $color='Синий', $price=200, $quantityInTheBox=50 )
-    	{
-    		$this->color = $color;
-    		$this->price = $price;
-    		$this->quantityInTheBox = $quantityInTheBox;
-    	}
-
-        public function print()
-        {
-            echo "Класс коробки с ручками";
-        }
-
-        public function BallPenBoxPrint()
-        {
-            echo $this->color.' '.$this->price.' '.$this->quantityInTheBox;
-        }
+        echo $this->color . ' ' . $this->price . ' ' . $this->quantityInTheBox;
     }
-    interface DuckInterface
+}
+
+interface DuckInterface
+{
+    public function DuckPrint();
+}
+
+class DuckClass extends SuperClass implements DuckInterface
+{
+    public $weight;
+    public $name;
+    public $status;
+
+    public function __construct($weight = 5, $name = 'Утка', $status = 'Крякает')
     {
-        public function DuckPrint();
+        $this->weight = $weight;
+        $this->name = $name;
+        $this->status = $status;
     }
 
-    class DuckClass extends SuperClass implements DuckInterface
+    public function print()
     {
-    	public $weight;
-    	public $name;
-    	public $status;
-
-    	public function __construct ( $weight=5, $name='Утка', $status='Крякает')
-    	{
-    		$this->weight = $weight;
-    		$this->name = $name;
-    		$this->status = $status;
-    	}
-
-        public function print()
-        {
-            echo "Класс с утками";
-        }
-
-        public function DuckPrint()
-        {
-            echo $this->weight.' '.$this->name.' '.$this->status;
-        }
+        echo "Класс с утками";
     }
 
-    interface ProductInterface
+    public function DuckPrint()
     {
-        public function printProduct();
+        echo $this->weight . ' ' . $this->name . ' ' . $this->status;
+    }
+}
+
+interface ProductInterface
+{
+    public function printProduct();
+}
+
+class ProductClass extends SuperClass implements ProductInterface
+{
+    public $price;
+    public $name;
+    public $status;
+    public $delivery;
+
+    public function __construct($price = 1, $name = 'Товар', $status = 'Нет на скалде')
+    {
+        $this->price = $price;
+        $this->name = $name;
+        $this->status = $status;
+        $this->delivery = self::delivery($price);
     }
 
-    class ProductClass extends SuperClass implements ProductInterface
+    private function delivery($price)
     {
-    	public $price;
-    	public $name;
-    	public $status;
-    	public $delivery;
-
-    	public function __construct( $price=1, $name='Товар', $status='Нет на скалде')
-    	{
-    		$this->price = $price;
-    		$this->name = $name;
-    		$this->status = $status;
-    		$this->delivery = self::delivery($price);
-    	}
-
-        private function delivery($price)
-    	{
-    		if( $price > 10000)
-    		{
-    			return 'Бесплатная доставка';
-    		} else
-    		{
-    			return 'Платная доставка';
-    		}
-    	}
-
-        public function print()
-        {
-            echo "Класс с продуктами";
-        }
-
-        public function printProduct()
-        {
-            echo $this->price.' '.$this->name.' '.$this->status.' '.$this->status.' '.$this->delivery;
+        if ($price > 10000) {
+            return 'Бесплатная доставка';
+        } else {
+            return 'Платная доставка';
         }
     }
 
-    $car = new CarClass('Красный','80 л.с.','7л на 100км','Лада');
-    $car1 = new CarClass();
+    public function print()
+    {
+        echo "Класс с продуктами";
+    }
 
-    $televisor = new TVClass('Белый','4K', 30000);
-    $televisor1 = new TVClass();
+    public function printProduct()
+    {
+        echo $this->price . ' ' . $this->name . ' ' . $this->status . ' ' . $this->status . ' ' . $this->delivery;
+    }
+}
 
-    $ballPenBox = new BallPenBoxClass('Красный', 500, 100);
-    $ballPenBox1 = new BallPenBoxClass('Чёрный');
+$car = new CarClass('Красный', '80 л.с.', '7л на 100км', 'Лада');
+$car1 = new CarClass();
 
-    $duck = new DuckClass ('Весомый','Скрудж Макдак','Селезень-миллиардер');
-    $duck1 = new DuckClass ('Супергеройский','Чёрный Плащ','Ужас, летящий на крыльях ночи');
+$televisor = new TVClass('Белый', '4K', 30000);
+$televisor1 = new TVClass();
 
-    $product = new ProductClass (15000, 'Фрезерный станок с ЧПУ', 'На складе');
-    $product1 = new ProductClass (9000, 'Фрезерный станок', 'На складе');
+$ballPenBox = new BallPenBoxClass('Красный', 500, 100);
+$ballPenBox1 = new BallPenBoxClass('Чёрный');
 
-    echo '<pre>';
-    var_dump($car);
-    var_dump($car1);
-    var_dump($televisor);
-    var_dump($televisor1);
-    var_dump($ballPenBox);
-    var_dump($ballPenBox1);
-    var_dump($duck);
-    var_dump($duck1);
-    var_dump($product);
-    var_dump($product1);
-    echo '</pre>';
+$duck = new DuckClass ('Весомый', 'Скрудж Макдак', 'Селезень-миллиардер');
+$duck1 = new DuckClass ('Супергеройский', 'Чёрный Плащ', 'Ужас, летящий на крыльях ночи');
+
+$product = new ProductClass (15000, 'Фрезерный станок с ЧПУ', 'На складе');
+$product1 = new ProductClass (9000, 'Фрезерный станок', 'На складе');
+
+echo '<pre>';
+var_dump($car);
+var_dump($car1);
+var_dump($televisor);
+var_dump($televisor1);
+var_dump($ballPenBox);
+var_dump($ballPenBox1);
+var_dump($duck);
+var_dump($duck1);
+var_dump($product);
+var_dump($product1);
+echo '</pre>';

@@ -7,7 +7,7 @@ $obj2 = new \classes\telephones\Telephones();
 $obj3 = new \classes\furniture\Furniture();
 if (isset($_GET['id'])) {
     $_GET['vol'] = isset($_GET['vol']) ? $vol : 1;
-    $objCart = new \classes\cart\Cart($_GET['id'],$_GET['vol']);
+    $objCart = new \classes\cart\Cart($_GET['id'], $_GET['vol']);
 }
 ?>
 
@@ -25,26 +25,26 @@ if (isset($_GET['id'])) {
 <div class="form">
     <p>
         <a href="order.php">Корзина: <?= $_SESSION['cartNumber'] ?></a>
-        <p>Общая сумма: <?= $_SESSION['cartPrice'] ?></p>
+    <p>Общая сумма: <?= $_SESSION['cartPrice'] ?></p>
     </p>
     <div>
         <?php
-            $obj->printProduct();
+        $obj->printProduct();
         ?>
     </div>
     <div>
         <?php
-            $obj1->printProduct();
+        $obj1->printProduct();
         ?>
     </div>
     <div>
         <?php
-            $obj2->printProduct();
+        $obj2->printProduct();
         ?>
     </div>
     <div>
         <?php
-            $obj3->printProduct();
+        $obj3->printProduct();
         ?>
     </div>
 </div>

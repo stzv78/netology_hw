@@ -12,6 +12,6 @@ class Cart
         $_SESSION['cartNumber']++;
         $_SESSION['idProduct'][] = $id;
         $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
-        $_SESSION['cartPrice'] = $_SESSION['cartPrice'] + ($dbProduct[$id]['price']*$vol);
+        $_SESSION['cartPrice'] = $_SESSION['cartPrice'] + ($dbProduct[$id]['price'] * $vol);
     }
 }

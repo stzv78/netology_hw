@@ -10,8 +10,8 @@ class Furniture extends \classes\AllProduct
     public function __construct()
     {
         $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
-        foreach ($dbProduct as $key=>$data){
-            if ($data["class"]==="Мебель"){
+        foreach ($dbProduct as $key => $data) {
+            if ($data["class"] === "Мебель") {
                 $arrayFurniture[$key] = $data;
             }
         }

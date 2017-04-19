@@ -10,8 +10,8 @@ class Clothing extends \classes\AllProduct
     public function __construct()
     {
         $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
-        foreach ($dbProduct as $key=>$data){
-            if ($data["class"]==="Одежда"){
+        foreach ($dbProduct as $key => $data) {
+            if ($data["class"] === "Одежда") {
                 $arrayFurniture[$key] = $data;
             }
         }
