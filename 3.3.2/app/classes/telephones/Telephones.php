@@ -3,13 +3,13 @@
 namespace classes\telephones;
 
 
-class Telephones extends \classes\AllProduct
+class Telephones extends \AllProduct
 {
     use \classes\AllProductTrait;
 
     public function __construct()
     {
-        $dbProduct = \classes\AllProductTrait::dataBaseConnetc();
+        $dbProduct = self::dataBaseConnetc();
         foreach ($dbProduct as $key => $data) {
             if ($data["class"] === "Телефон") {
                 $arrayTelephones[$key] = $data;

@@ -2,12 +2,14 @@
 require_once 'app/session.php';
 require_once 'app/autoload.php';
 $objOrder = new \classes\order\Order($_SESSION);
+$objCart = new \classes\cart\Cart();
+$objCart->setDataProduct($_SESSION);
 if (isset($_GET['delId'])) {
-    $objOrder->deleteProduct($_GET['delId']);
+    $objCart->deleteProduct($_GET['delId']);
     header('Location:order.php');
 }
 session_unset();
-$_SESSION = $objOrder->dataProduct;
+$_SESSION = $objCart->dataProduct;
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +19,7 @@ $_SESSION = $objOrder->dataProduct;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-    <link href="/u/kotyukov/3.3.2/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Домашние задание 3.3</title>
 </head>
 <body>
