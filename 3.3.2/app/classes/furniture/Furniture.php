@@ -2,8 +2,9 @@
 
 namespace classes\furniture;
 
+use classes\AllProduct;
 
-class Furniture extends \AllProduct
+class Furniture extends AllProduct
 {
     use \classes\AllProductTrait;
 

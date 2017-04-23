@@ -2,8 +2,9 @@
 
 namespace classes\clothing;
 
+use classes\AllProduct;
 
-class Clothing extends \AllProduct
+class Clothing extends AllProduct
 {
     use \classes\AllProductTrait;
 

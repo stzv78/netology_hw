@@ -2,8 +2,9 @@
 
 namespace classes\appliances;
 
+use classes\AllProduct;
 
-class Appliances extends \AllProduct
+class Appliances extends AllProduct
 {
     use \classes\AllProductTrait;
 

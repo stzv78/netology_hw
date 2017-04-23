@@ -2,8 +2,9 @@
 
 namespace classes\telephones;
 
+use classes\AllProduct;
 
-class Telephones extends \AllProduct
+class Telephones extends AllProduct
 {
     use \classes\AllProductTrait;
 
