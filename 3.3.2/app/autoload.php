@@ -1,7 +1,5 @@
 <?php
 
-require_once 'app/classes/AllProduct.php';
-
 function loadFromApp($aClassName)
 {
     $aClassNameArr = explode('\\', $aClassName);

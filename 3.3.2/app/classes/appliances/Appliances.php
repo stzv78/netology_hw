@@ -10,7 +10,7 @@ class Appliances extends AllProduct
 
     public function __construct()
     {
-        $dbProduct = self::dataBaseConnetc();
+        $dbProduct = self::dataBaseConnect();
         foreach ($dbProduct as $key => $data) {
             if ($data["class"] === "Бытовая техника") {
                 $arrayAppliances[$key] = $data;

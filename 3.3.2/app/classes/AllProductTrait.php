@@ -7,7 +7,7 @@ trait AllProductTrait
 {
     public $dataProduct;
 
-    public static function dataBaseConnetc()
+    public static function dataBaseConnect()
     {
         $dbJSON = file_get_contents(realpath(__DIR__ . DIRECTORY_SEPARATOR . '../db/db.json'));
         $dbArray = json_decode($dbJSON, true);

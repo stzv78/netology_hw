@@ -15,7 +15,7 @@ class Order
     public function printOrder()
     {
         $producValueId = array_count_values($this->dataProduct['idProduct']);
-        $dbProduct = self::dataBaseConnetc();
+        $dbProduct = self::dataBaseConnect();
         foreach ($producValueId as $id => $quantity) {
             echo '<div>';
             echo 'Товар: ' . $dbProduct[$id]['brand'] . '<br />';

@@ -16,13 +16,13 @@ class Cart
     {
         $_SESSION['cartNumber']++;
         $_SESSION['idProduct'][] = $id;
-        $dbProduct = self::dataBaseConnetc();
+        $dbProduct = self::dataBaseConnect();
         $_SESSION['cartPrice'] = $_SESSION['cartPrice'] + ($dbProduct[$id]['price'] * $vol);
     }
 
     public function deleteProduct($id)
     {
-        $dbProduct = self::dataBaseConnetc();
+        $dbProduct = self::dataBaseConnect();
         $this->dataProduct["cartPrice"] = $this->dataProduct["cartPrice"] - $dbProduct[$id]['price'];
         $this->dataProduct["cartNumber"] = $this->dataProduct["cartNumber"] - 1;
         unset($this->dataProduct['idProduct'][array_search($id, $this->dataProduct['idProduct'])]);
