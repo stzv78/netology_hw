@@ -7,6 +7,11 @@ namespace classes\auth;
 
 class Session
 {
+    /**
+     * Session constructor.
+     *
+     * Стартует сессию и определяет какой файл нужно загрузить
+     */
     public function __construct()
     {
         if (empty($_SESSION['on'])) {
@@ -16,12 +21,15 @@ class Session
         $this->logout();
         $this->login();
         if (empty($_SESSION['logUser'])) {
-            require_once __DIR__.'/index.php';
+            require_once __DIR__ . '/index.php';
         } else {
-            require_once realpath(__DIR__.'/../../TODO/todo.php');
+            require_once realpath(__DIR__ . '/../../TODO/todo.php');
         }
     }
 
+    /**
+     * Загружает файл который запрашивет поьзователь, если такого нет выдаёт 404 ошибку
+     */
     private function login()
     {
         if (isset($_GET['login'])) {
@@ -34,6 +42,9 @@ class Session
         }
     }
 
+    /**
+     * Уничтожает сессию
+     */
     private function logout()
     {
         if (isset($_POST['logout'])) {

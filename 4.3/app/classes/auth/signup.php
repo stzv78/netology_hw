@@ -66,38 +66,41 @@ if (isset($data["go_regist"])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Регистрация</title>
 </head>
 <body>
-<?php
-if (!empty($errors)):
-    echo '<p style="color: red;">' . array_shift($errors) . '</p>';
-endif;
-?>
-<form method="POST">
-    <p>
-        <label id="name">Вашe имя:</label>
-        <br/>
-        <input id="name" type="text" name="name" value="<?= @$data["name"] ?>" placeholder="Евгений">
-    </p>
-    <p>
-        <label id="login">Ваш логин:</label>
-        <br/>
-        <input id="login" type="text" name="login" value="<?= @$data["login"] ?>" placeholder="admin">
-    </p>
-    <p>
-        <label id="password">Ваш пароль:</label>
-        <br/>
-        <input id="password" type="password" name="password">
-    </p>
-    <p>
-        <label id="password_2">Повторите пароль:</label>
-        <br/>
-        <input id="password_2" type="password" name="password_2">
-    </p>
-    <p>
-        <input type="submit" name="go_regist" value="Зарегистрироватся">
-    </p>
-</form>
+<div class="form">
+    <?php
+    if (!empty($errors)):
+        echo '<p style="color: red;">' . array_shift($errors) . '</p>';
+    endif;
+    ?>
+    <form method="POST">
+        <p>
+            <label id="name">Вашe имя:</label>
+            <br/>
+            <input id="name" type="text" name="name" value="<?= @$data["name"] ?>" placeholder="Евгений">
+        </p>
+        <p>
+            <label id="login">Ваш логин:</label>
+            <br/>
+            <input id="login" type="text" name="login" value="<?= @$data["login"] ?>" placeholder="admin">
+        </p>
+        <p>
+            <label id="password">Ваш пароль:</label>
+            <br/>
+            <input id="password" type="password" name="password">
+        </p>
+        <p>
+            <label id="password_2">Повторите пароль:</label>
+            <br/>
+            <input id="password_2" type="password" name="password_2">
+        </p>
+        <p>
+            <input type="submit" name="go_regist" value="Зарегистрироватся">
+        </p>
+    </form>
+</div>
 </body>
 </html>

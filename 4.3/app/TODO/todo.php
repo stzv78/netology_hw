@@ -11,9 +11,11 @@ require_once 'query.php';
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Личный кабинет</title>
 </head>
 <body>
+<div>
     <h1>Добро пожаловать <?php echo $_SESSION['logUser']['name'] ?></h1>
     <form method="POST">
         <input type="submit" name="logout" value="Выйти">
@@ -82,12 +84,12 @@ require_once 'query.php';
                             <form method="POST">
                                 <select name='assigned_user_id'>
                                     <?php foreach ($dataUserArr as $keyUser => $dataUser): ?>
-                                    <option value="<?php echo $dataUser['id'] . '&' . $data['id']; ?>">
-                                        <?php echo htmlspecialchars($dataUser['name'], ENT_QUOTES); ?>
-                                    </option>
+                                        <option value="<?php echo $dataUser['id'] . '&' . $data['id']; ?>">
+                                            <?php echo htmlspecialchars($dataUser['name'], ENT_QUOTES); ?>
+                                        </option>
                                     <?php endforeach; ?>
                                 </select>
-                                <input type='submit' name='assign' value='Переложить ответственность' />
+                                <input type='submit' name='assign' value='Переложить ответственность'/>
                             </form>
                         </td>
                     </tr>
@@ -143,5 +145,6 @@ require_once 'query.php';
             </table>
         </div>
     </div>
+</div>
 </body>
 </html>

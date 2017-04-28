@@ -18,7 +18,7 @@ if (isset($data["go_login"])) {
         if (!empty($validationUser) && $validationPass) {
             $_SESSION['logUser'] = ['id' => (int)$validationUser[0]['id'], 'name' => $validationUser[0]['name']];
             unset($_GET['login']);
-            header('Location: '.explode('?', $_SERVER['HTTP_REFERER'])[0]);
+            header('Location: ' . explode('?', $_SERVER['HTTP_REFERER'])[0]);
         } else {
             $errors [] = 'Пользователя с таким логин не существует или неправельно введён пароль!';
         }
@@ -36,34 +36,41 @@ if (isset($data["go_login"])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Авторизация</title>
 </head>
 <body>
+<div class="form">
+    <?php
+    if (!empty($_SESSION['regist'])) {
+        echo '<p style="color: green;">Регистрация прошла успешно!</p>';
+    }
 
-<?php
-if (!empty($_SESSION['regist'])) {
-echo '<p style="color: green;">Регистрация прошла успешно!</p>';
-}
-
-if (!empty($errors)) {
-    echo '<p style="color: red;">' . array_shift($errors) . '</p>';
-}
-?>
-<form method="POST">
-    <p>
-        <lable id="login">Логин:</lable>
-        <br/>
-        <input id="login" type="text" name="login" value="<?= @$data["login"] ?>" placeholder="admin">
-    </p>
-    <p>
-        <lable id="password">Пароль:</lable>
-        <br/>
-        <input id="password" type="password" name="password">
-    </p>
-    <p>
-        <input type="submit" name="go_login" value="Войти">
-    </p>
-</form>
-
+    if (!empty($errors)) {
+        echo '<p style="color: red;">' . array_shift($errors) . '</p>';
+    }
+    ?>
+    <div>
+        <h3>Гостевые аккаунты:</h3>
+        <p>Гость1 логин:guest1 пароль:guest1</p>
+        <p>Гость2 логин:guest2 пароль:guest2</p>
+        <p>Гость3 логин:guest3 пароль:guest3</p>
+    </div>
+    <form method="POST">
+        <p>
+            <lable id="login">Логин:</lable>
+            <br/>
+            <input id="login" type="text" name="login" value="<?= @$data["login"] ?>" placeholder="admin">
+        </p>
+        <p>
+            <lable id="password">Пароль:</lable>
+            <br/>
+            <input id="password" type="password" name="password">
+        </p>
+        <p>
+            <input type="submit" name="go_login" value="Войти">
+        </p>
+    </form>
+</div>
 </body>
 </html>

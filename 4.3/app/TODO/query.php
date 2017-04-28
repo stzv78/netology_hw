@@ -25,7 +25,7 @@ if (isset($_GET['id'])) {
  *
  * Первая таблица
  */
-$dataUserArr     = $objDataBase->query("SELECT id, name FROM user");
+$dataUserArr = $objDataBase->query("SELECT id, name FROM user");
 if (!empty($_POST['sort'])) {
     if ($_POST['sort_by'] === 'date_added' || $_POST['sort_by'] === 'is_done' || $_POST['sort_by'] === 'description') {
         $sqlDataTODO = "SELECT t.id, t.user_id, t.assigned_user_id, t.date_added, t.is_done, t.description, u.name
