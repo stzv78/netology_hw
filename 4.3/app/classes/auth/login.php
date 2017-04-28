@@ -1,18 +1,28 @@
 <?php
+/**
+ * Файл авторизации
+ */
 $objDataBase = new classes\db\DataBase();
 
+/**
+ * Подготовка данных для проверки
+ */
 $data = $_POST;
 $data['login'] = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
 $data['password'] = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 $data['login'] = trim($data['login']);
 $data['password'] = trim($data['password']);
 
+/**
+ * Проверка введённых данных
+ */
 if (isset($data["go_login"])) {
     $errors = [];
     if (!empty($data["login"]) && !empty($data["password"])) {
         $sqlLoginTest = "SELECT * FROM user WHERE login LIKE :login";
         $sqlLoginTestArr = ["login" => $data["login"]];
         $validationUser = $objDataBase->query($sqlLoginTest, $sqlLoginTestArr);
+        // Поставил собачку, что бы нотис не появлялся. Когда пароли не совпадают выдаёт нотис. Не знаю почему
         @$validationPass = password_verify($data["password"], $validationUser[0]["password"]);
 
         if (!empty($validationUser) && $validationPass) {

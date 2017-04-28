@@ -1,11 +1,21 @@
 <?php
+/**
+ * Файл регистрации
+ */
 $objDataBase = new classes\db\DataBase();
+
+/**
+ * Подготовка данных
+ */
 $data = $_POST;
 $data['name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $data['login'] = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
 $data['name'] = trim($data['name']);
 $data['login'] = trim($data['login']);
 
+/**
+ * Обработка данных
+ */
 if (isset($data["go_regist"])) {
     $errors = [];
     $doneRegist = '';
@@ -44,6 +54,9 @@ if (isset($data["go_regist"])) {
         $errors [] = 'Повторный пароль не совпадает с первым!';
     }
 
+    /**
+     * Регистрация пользователя и запись данных в БД
+     */
     if (empty($errors)) {
         $data['password'] = password_hash(trim($data['password']), PASSWORD_DEFAULT);
         $sqlSignUp = "INSERT INTO user (login, password, name) VALUES ( :login, :password, :name)";
