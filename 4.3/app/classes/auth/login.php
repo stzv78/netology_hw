@@ -13,7 +13,7 @@ if (isset($data["go_login"])) {
         $sqlLoginTest = "SELECT * FROM user WHERE login LIKE :login";
         $sqlLoginTestArr = ["login" => $data["login"]];
         $validationUser = $objDataBase->query($sqlLoginTest, $sqlLoginTestArr);
-        $validationPass = password_verify($data["password"], $validationUser[0]["password"]);
+        @$validationPass = password_verify($data["password"], $validationUser[0]["password"]);
 
         if (!empty($validationUser) && $validationPass) {
             $_SESSION['logUser'] = ['id' => (int)$validationUser[0]['id'], 'name' => $validationUser[0]['name']];
