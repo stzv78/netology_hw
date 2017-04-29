@@ -8,7 +8,7 @@ $objDataBase = new DataBase();
 $errors = [];
 
 /**
- * Проверка входящих данных, что бы можно было не использовать плейсхолдеры
+ * Проверка входящих данных
  */
 $_POST['description'] = isset($_POST['description']) ? filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING) : '';
 $valueTask = ['description' => $_POST['description'], 'button' => 'Добавить'];
@@ -41,19 +41,19 @@ if (isset($_POST['sort'])) {
  */
 if (isset($_GET['action']) && isset($_GET['id'])) {
     if ($_GET['action'] === 'done') {
-        $sqlDone = "UPDATE `tasks` SET `is_done` = 1 WHERE `id` = " . $getId;
-        $objDataBase->execute($sqlDone);
+        $sqlDone = "UPDATE `tasks` SET `is_done` = 1 WHERE `id` LIKE :id";
+        $objDataBase->execute($sqlDone, ["id" => $getId]);
         header('Location:index.php');
     }
 
     if ($_GET['action'] === 'delete') {
-        $sqlDelete = "DELETE FROM `tasks` WHERE `id` =" . $getId;
-        $objDataBase->execute($sqlDelete);
+        $sqlDelete = "DELETE FROM `tasks` WHERE `id` LIKE :id";
+        $objDataBase->execute($sqlDelete, ["id" => $getId]);
         header('Location:index.php');
     }
 
     if ($_GET['action'] === 'edit') {
-        $queryEdit = $objDataBase->query("SELECT `description` FROM `tasks` WHERE `id` = " . $getId);
+        $queryEdit = $objDataBase->query("SELECT `description` FROM `tasks` WHERE `id` LIKE :id", ["id" => $getId]);
         $valueTask = ['description' => $queryEdit[0]['description'], 'button' => 'Изменить'];
     }
 }
@@ -67,16 +67,21 @@ if (isset($_GET['action']) && isset($_GET['id'])) {
 if (!empty($_POST['save'])) {
     if (!empty($_POST['description'])) {
         if ($_GET['action'] === 'edit' && isset($_GET['id'])) {
-            $sqlSave = "UPDATE `tasks` SET `description` = '" . $_POST['description'] . "' WHERE `id` = " . $getId;
-            $objDataBase->execute($sqlSave);
+            $sqlSave = "UPDATE `tasks` SET `description` = :description WHERE `id` LIKE :id";
+            $objDataBase->execute($sqlSave, [
+                "description" => $_POST['description'],
+                "id" => $getId
+            ]);
             header('Location:index.php');
         } elseif ($_GET['action'] === 'edit' && !isset($_GET['id'])) {
             $errors [] = 'В запросе отсутствует идентификатор!';
         } else {
             $time = date('Y-m-d H:i:s');
-            $sqlSaveValues = "('" . $_POST['description'] . "',0,'" . $time . "')";
-            $sqlSave = "INSERT INTO `tasks` (`description`,`is_done`,`date_added`) VALUES " . $sqlSaveValues;
-            $objDataBase->execute($sqlSave);
+            $sqlSave = "INSERT INTO `tasks` (`description`,`date_added`) VALUES ( :description, :date_added)";
+            $objDataBase->execute($sqlSave, [
+                "description" => $_POST['description'],
+                "date_added" => $time
+            ]);
             header('Location:index.php');
         }
     } else {

@@ -6,7 +6,7 @@
 return [
     'host' => 'localhost',
     'charset' => 'utf8',
-    'dbName' => 'kotyukov',
-    'userName' => 'kotyukov',
-    'userPassword' => 'neto0988'
+    'dbName' => 'global',
+    'userName' => 'root',
+    'userPassword' => 'root'
 ];

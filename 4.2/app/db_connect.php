@@ -37,10 +37,10 @@ class DataBase
      * @param $sql
      * @return mixed
      */
-    public function execute($sql)
+    public function execute($sql, $arrayPlaceholder = [])
     {
         $sth = $this->link->prepare($sql);
-        return $sth->execute();
+        return $sth->execute($arrayPlaceholder);
     }
 
     /**
@@ -49,10 +49,10 @@ class DataBase
      * @param $sql запрос к бд
      * @return $result возвращяет ассоциативный массив, но если запрос не выполнился возвращяет пустой массив
      */
-    public function query($sql)
+    public function query($sql, $arrayPlaceholder = [])
     {
         $sth = $this->link->prepare($sql);
-        $sth->execute();
+        $sth->execute($arrayPlaceholder);
         $result = $sth->fetchALL(PDO::FETCH_ASSOC);
         if ($result === false) {
             return [];
